@@ -46,7 +46,7 @@
     --theme-hero-g1: rgba(14, 165, 233, 0.06);
     --theme-hero-g2: rgba(6, 182, 212, 0.04);
     --theme-hero-g3: rgba(14, 165, 233, 0.03);
-    --theme-hero-overlay: rgba(255, 255, 255, 0.6);
+    --theme-hero-overlay: linear-gradient(105deg, rgba(241, 245, 249, 0.92) 0%, rgba(241, 245, 249, 0.75) 40%, rgba(241, 245, 249, 0.2) 70%, transparent 100%);
     --theme-header-icon: 15 23 42;
   }
 
@@ -69,7 +69,7 @@
     --theme-hero-g1: rgba(14, 165, 233, 0.08);
     --theme-hero-g2: rgba(6, 182, 212, 0.06);
     --theme-hero-g3: rgba(14, 165, 233, 0.04);
-    --theme-hero-overlay: rgba(10, 22, 40, 0.88);
+    --theme-hero-overlay: linear-gradient(105deg, rgba(6, 14, 26, 0.92) 0%, rgba(6, 14, 26, 0.78) 40%, rgba(6, 14, 26, 0.25) 70%, transparent 100%);
     --theme-header-icon: 255 255 255;
   }
 
@@ -218,11 +218,11 @@
 }
 
 .hero-overlay {
-  background: var(--theme-hero-overlay);
+  background-image: var(--theme-hero-overlay);
 }
 
 .hero-gradient {
-  background: 
+  background-image:
     radial-gradient(ellipse at 20% 50%, var(--theme-hero-g1) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, var(--theme-hero-g2) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 80%, var(--theme-hero-g3) 0%, transparent 50%);
