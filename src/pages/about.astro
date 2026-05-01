@@ -20,7 +20,7 @@ import about from '../content/about.json';
           <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
             <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">{about.badge}</span>
           </div>
-          <h2 class="section-title text-heading">{about.headline.map((l) => l).join('<br/>')}</h2>
+          <h2 class="section-title text-heading" set:html={about.headline.join('<br/>')} />
           {about.paragraphs.map((p) => (
             <p class="text-muted leading-relaxed mt-6 mb-6">{p}</p>
           ))}
