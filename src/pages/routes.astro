@@ -10,67 +10,67 @@ const regions = [
     name: 'East Asia',
     color: 'ocean',
     destinations: [
-      { port: 'Shanghai', country: 'China', transit: '18-22 days' },
-      { port: 'Ningbo', country: 'China', transit: '18-22 days' },
-      { port: 'Shenzhen', country: 'China', transit: '16-20 days' },
-      { port: 'Busan', country: 'South Korea', transit: '22-26 days' },
-      { port: 'Tokyo', country: 'Japan', transit: '24-28 days' },
+      { port: 'Shanghai', country: 'China' },
+      { port: 'Ningbo', country: 'China' },
+      { port: 'Shenzhen', country: 'China' },
+      { port: 'Busan', country: 'South Korea' },
+      { port: 'Tokyo', country: 'Japan' },
     ],
   },
   {
     name: 'Middle Asia (CIS)',
     color: 'teal',
     destinations: [
-      { port: 'Bandar Abbas', country: 'Iran', transit: '2-4 days' },
-      { port: 'Aktau', country: 'Kazakhstan', transit: '5-7 days' },
-      { port: 'Turkmenbashi', country: 'Turkmenistan', transit: '5-7 days' },
-      { port: 'Baku', country: 'Azerbaijan', transit: '4-6 days' },
-      { port: 'Novorossiysk', country: 'Russia', transit: '6-8 days' },
+      { port: 'Bandar Abbas', country: 'Iran' },
+      { port: 'Aktau', country: 'Kazakhstan' },
+      { port: 'Turkmenbashi', country: 'Turkmenistan' },
+      { port: 'Baku', country: 'Azerbaijan' },
+      { port: 'Novorossiysk', country: 'Russia' },
     ],
   },
   {
     name: 'West Asia / South Asia',
     color: 'ocean',
     destinations: [
-      { port: 'Mumbai', country: 'India', transit: '10-14 days' },
-      { port: 'Nhava Sheva', country: 'India', transit: '10-14 days' },
-      { port: 'Karachi', country: 'Pakistan', transit: '6-8 days' },
-      { port: 'Colombo', country: 'Sri Lanka', transit: '8-10 days' },
-      { port: 'Chittagong', country: 'Bangladesh', transit: '10-12 days' },
+      { port: 'Mumbai', country: 'India' },
+      { port: 'Nhava Sheva', country: 'India' },
+      { port: 'Karachi', country: 'Pakistan' },
+      { port: 'Colombo', country: 'Sri Lanka' },
+      { port: 'Chittagong', country: 'Bangladesh' },
     ],
   },
   {
     name: 'Middle East',
     color: 'teal',
     destinations: [
-      { port: 'Dubai (Jebel Ali)', country: 'UAE', transit: '6-8 days' },
-      { port: 'Jeddah', country: 'Saudi Arabia', transit: '4-6 days' },
-      { port: 'Doha', country: 'Qatar', transit: '5-7 days' },
-      { port: 'Muscat', country: 'Oman', transit: '5-7 days' },
-      { port: 'Kuwait', country: 'Kuwait', transit: '7-9 days' },
+      { port: 'Dubai (Jebel Ali)', country: 'UAE' },
+      { port: 'Jeddah', country: 'Saudi Arabia' },
+      { port: 'Doha', country: 'Qatar' },
+      { port: 'Muscat', country: 'Oman' },
+      { port: 'Kuwait', country: 'Kuwait' },
     ],
   },
   {
     name: 'Europe',
     color: 'ocean',
     destinations: [
-      { port: 'Rotterdam', country: 'Netherlands', transit: '10-14 days' },
-      { port: 'Antwerp', country: 'Belgium', transit: '10-14 days' },
-      { port: 'Barcelona', country: 'Spain', transit: '8-12 days' },
-      { port: 'Genoa', country: 'Italy', transit: '8-12 days' },
-      { port: 'Constanta', country: 'Romania', transit: '6-8 days' },
-      { port: 'Haydar Pasha', country: 'Turkey', transit: '3-5 days' },
+      { port: 'Rotterdam', country: 'Netherlands' },
+      { port: 'Antwerp', country: 'Belgium' },
+      { port: 'Barcelona', country: 'Spain' },
+      { port: 'Genoa', country: 'Italy' },
+      { port: 'Constanta', country: 'Romania' },
+      { port: 'Haydar Pasha', country: 'Turkey' },
     ],
   },
   {
     name: 'North & West Africa',
     color: 'teal',
     destinations: [
-      { port: 'Tangier', country: 'Morocco', transit: '3-5 days' },
-      { port: 'Casablanca', country: 'Morocco', transit: '4-6 days' },
-      { port: 'Lagos', country: 'Nigeria', transit: '8-12 days' },
-      { port: 'Tema', country: 'Ghana', transit: '8-10 days' },
-      { port: 'Dakar', country: 'Senegal', transit: '6-8 days' },
+      { port: 'Tangier', country: 'Morocco' },
+      { port: 'Casablanca', country: 'Morocco' },
+      { port: 'Lagos', country: 'Nigeria' },
+      { port: 'Tema', country: 'Ghana' },
+      { port: 'Dakar', country: 'Senegal' },
     ],
   },
 ];
@@ -157,17 +157,10 @@ const regions = [
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {region.destinations.map((dest) => (
-                <div class="bg-navy-800/30 border border-navy-600/20 rounded-xl p-4 hover:border-ocean-500/30 transition-all duration-300 hover:-translate-y-0.5">
-                  <div class="text-heading font-medium text-sm mb-1">{dest.port}</div>
-                  <div class="text-faint text-xs mb-2">{dest.country}</div>
-                  <div class="flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-ocean-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                    <span class="text-ocean-400 text-xs font-medium">{dest.transit}</span>
-                  </div>
-                </div>
+                 <div class="bg-navy-800/30 border border-navy-600/20 rounded-xl p-4 hover:border-ocean-500/30 transition-all duration-300 hover:-translate-y-0.5">
+                   <div class="text-heading font-medium text-sm mb-1">{dest.port}</div>
+                   <div class="text-faint text-xs">{dest.country}</div>
+                 </div>
               ))}
             </div>
           </div>
