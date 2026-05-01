@@ -62,10 +62,10 @@ const services = [
 
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Quick Links</h3>
-        <ul class="space-y-3">
+        <ul class="space-y-1">
           {quickLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-slate-400 hover:text-ocean-400 text-sm transition-colors duration-300">
+              <a href={link.href} class="block py-2 text-slate-400 hover:text-ocean-400 text-sm transition-colors duration-300">
                 {link.label}
               </a>
             </li>
@@ -75,10 +75,10 @@ const services = [
 
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Services</h3>
-        <ul class="space-y-3">
+        <ul class="space-y-1">
           {services.map((service) => (
             <li>
-              <a href="/services" class="text-slate-400 hover:text-ocean-400 text-sm transition-colors duration-300">
+              <a href="/services" class="block py-2 text-slate-400 hover:text-ocean-400 text-sm transition-colors duration-300">
                 {service}
               </a>
             </li>
