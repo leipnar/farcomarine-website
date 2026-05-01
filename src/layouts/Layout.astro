@@ -33,6 +33,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <title>{title}</title>
 
+    <script is:inline>
+      (function(){
+        var t=localStorage.getItem('farco-theme');
+        if(t==='light'){document.documentElement.classList.remove('dark')}
+        else{document.documentElement.classList.add('dark')}
+      })();
+    </script>
+
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",

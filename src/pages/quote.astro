@@ -17,21 +17,21 @@ import PageHero from '../components/PageHero.astro';
         <div class="lg:col-span-2">
           <form action="mailto:info@farcomarine.net" method="POST" enctype="text/plain" class="space-y-8">
             <div class="animate-on-scroll">
-              <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-3">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">1</span>
                 Shipment Details
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Origin Port / City *</label>
+                  <label class="block text-body text-sm font-medium mb-2">Origin Port / City *</label>
                   <input type="text" name="origin" required placeholder="e.g., Shanghai" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Destination Port / City *</label>
+                  <label class="block text-body text-sm font-medium mb-2">Destination Port / City *</label>
                   <input type="text" name="destination" required placeholder="e.g., Rotterdam" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Cargo Type *</label>
+                  <label class="block text-body text-sm font-medium mb-2">Cargo Type *</label>
                   <select name="cargo_type" required class="input-field">
                     <option value="">Select cargo type</option>
                     <option value="general">General Cargo</option>
@@ -43,28 +43,28 @@ import PageHero from '../components/PageHero.astro';
                   </select>
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Commodity Description</label>
+                  <label class="block text-body text-sm font-medium mb-2">Commodity Description</label>
                   <input type="text" name="commodity" placeholder="Brief description of goods" class="input-field" />
                 </div>
               </div>
             </div>
 
             <div class="animate-on-scroll">
-              <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-3">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">2</span>
                 Cargo Specifications
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Weight (kg)</label>
+                  <label class="block text-body text-sm font-medium mb-2">Weight (kg)</label>
                   <input type="number" name="weight" placeholder="Total weight" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Volume (CBM)</label>
+                  <label class="block text-body text-sm font-medium mb-2">Volume (CBM)</label>
                   <input type="number" name="volume" step="0.01" placeholder="Cubic meters" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Container Type</label>
+                  <label class="block text-body text-sm font-medium mb-2">Container Type</label>
                   <select name="container_type" class="input-field">
                     <option value="">Select type</option>
                     <option value="20ft">20ft Container</option>
@@ -75,24 +75,24 @@ import PageHero from '../components/PageHero.astro';
                   </select>
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">No. of Containers</label>
+                  <label class="block text-body text-sm font-medium mb-2">No. of Containers</label>
                   <input type="number" name="containers" min="1" placeholder="Quantity" class="input-field" />
                 </div>
               </div>
             </div>
 
             <div class="animate-on-scroll">
-              <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-3">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">3</span>
                 Timeline
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Preferred Shipment Date</label>
+                  <label class="block text-body text-sm font-medium mb-2">Preferred Shipment Date</label>
                   <input type="date" name="ship_date" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Delivery Urgency</label>
+                  <label class="block text-body text-sm font-medium mb-2">Delivery Urgency</label>
                   <select name="urgency" class="input-field">
                     <option value="standard">Standard (Flexible dates)</option>
                     <option value="express">Express (Fastest route)</option>
@@ -103,30 +103,30 @@ import PageHero from '../components/PageHero.astro';
             </div>
 
             <div class="animate-on-scroll">
-              <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-3">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">4</span>
                 Contact Information
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Full Name *</label>
+                  <label class="block text-body text-sm font-medium mb-2">Full Name *</label>
                   <input type="text" name="name" required placeholder="Your full name" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Company Name</label>
+                  <label class="block text-body text-sm font-medium mb-2">Company Name</label>
                   <input type="text" name="company" placeholder="Your company" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Email Address *</label>
+                  <label class="block text-body text-sm font-medium mb-2">Email Address *</label>
                   <input type="email" name="email" required placeholder="your@email.com" class="input-field" />
                 </div>
                 <div>
-                  <label class="block text-slate-300 text-sm font-medium mb-2">Phone Number</label>
+                  <label class="block text-body text-sm font-medium mb-2">Phone Number</label>
                   <input type="tel" name="phone" placeholder="+1 234 567 8900" class="input-field" />
                 </div>
               </div>
               <div class="mt-4">
-                <label class="block text-slate-300 text-sm font-medium mb-2">Additional Notes</label>
+                <label class="block text-body text-sm font-medium mb-2">Additional Notes</label>
                 <textarea name="notes" rows="4" placeholder="Any special requirements, questions, or additional details..." class="input-field resize-none"></textarea>
               </div>
             </div>
@@ -135,7 +135,7 @@ import PageHero from '../components/PageHero.astro';
               <button type="submit" class="btn-primary w-full sm:w-auto text-center">
                 Submit Quote Request
               </button>
-              <p class="text-slate-500 text-sm mt-3">We'll respond within 24 hours with a competitive quote.</p>
+              <p class="text-faint text-sm mt-3">We'll respond within 24 hours with a competitive quote.</p>
             </div>
           </form>
         </div>
@@ -143,15 +143,15 @@ import PageHero from '../components/PageHero.astro';
         <div class="lg:col-span-1">
           <div class="sticky top-28 space-y-6">
             <div class="card animate-on-scroll">
-              <h3 class="text-white font-semibold mb-4">Prefer to talk?</h3>
-              <p class="text-slate-400 text-sm mb-6">Our logistics experts are ready to discuss your shipping needs directly.</p>
+              <h3 class="text-heading font-semibold mb-4">Prefer to talk?</h3>
+              <p class="text-muted text-sm mb-6">Our logistics experts are ready to discuss your shipping needs directly.</p>
               <a href="/contact" class="btn-outline w-full text-center text-xs">
                 Contact Our Team
               </a>
             </div>
 
             <div class="card animate-on-scroll">
-              <h3 class="text-white font-semibold mb-4">What happens next?</h3>
+              <h3 class="text-heading font-semibold mb-4">What happens next?</h3>
               <div class="space-y-4">
                 {[
                   { step: '1', text: 'We review your request and requirements' },
@@ -161,15 +161,15 @@ import PageHero from '../components/PageHero.astro';
                 ].map((item) => (
                   <div class="flex items-start gap-3">
                     <span class="w-6 h-6 bg-ocean-500/10 rounded-full flex items-center justify-center text-ocean-400 text-xs font-bold flex-shrink-0">{item.step}</span>
-                    <span class="text-slate-400 text-sm">{item.text}</span>
+                    <span class="text-muted text-sm">{item.text}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div class="card animate-on-scroll bg-gradient-to-br from-ocean-600/20 to-teal-500/10 border-ocean-500/20">
-              <h3 class="text-white font-semibold mb-2">Quick Response</h3>
-              <p class="text-slate-400 text-sm">Average quote response time is under <span class="text-ocean-400 font-semibold">12 hours</span> during business days.</p>
+              <h3 class="text-heading font-semibold mb-2">Quick Response</h3>
+              <p class="text-muted text-sm">Average quote response time is under <span class="text-ocean-400 font-semibold">12 hours</span> during business days.</p>
             </div>
           </div>
         </div>

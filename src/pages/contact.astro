@@ -16,19 +16,19 @@ import PageHero from '../components/PageHero.astro';
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="lg:col-span-2">
           <form action="mailto:info@farcomarine.net" method="POST" enctype="text/plain" class="card animate-on-scroll">
-            <h3 class="text-xl font-semibold text-white mb-6">Send Us a Message</h3>
+            <h3 class="text-xl font-semibold text-heading mb-6">Send Us a Message</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Full Name *</label>
+                <label class="block text-body text-sm font-medium mb-2">Full Name *</label>
                 <input type="text" name="name" required placeholder="Your name" class="input-field" />
               </div>
               <div>
-                <label class="block text-slate-300 text-sm font-medium mb-2">Email Address *</label>
+                <label class="block text-body text-sm font-medium mb-2">Email Address *</label>
                 <input type="email" name="email" required placeholder="your@email.com" class="input-field" />
               </div>
             </div>
             <div class="mb-4">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Subject</label>
+              <label class="block text-body text-sm font-medium mb-2">Subject</label>
               <select name="subject" class="input-field">
                 <option value="">Select a topic</option>
                 <option value="quote">Quote Request</option>
@@ -39,7 +39,7 @@ import PageHero from '../components/PageHero.astro';
               </select>
             </div>
             <div class="mb-6">
-              <label class="block text-slate-300 text-sm font-medium mb-2">Message *</label>
+              <label class="block text-body text-sm font-medium mb-2">Message *</label>
               <textarea name="message" required rows="6" placeholder="How can we help you?" class="input-field resize-none"></textarea>
             </div>
             <button type="submit" class="btn-primary">
@@ -51,7 +51,7 @@ import PageHero from '../components/PageHero.astro';
         <div class="lg:col-span-1">
           <div class="space-y-6">
             <div class="card animate-on-scroll">
-              <h3 class="text-white font-semibold mb-5">Contact Details</h3>
+              <h3 class="text-heading font-semibold mb-5">Contact Details</h3>
               <div class="space-y-5">
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 bg-ocean-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -61,8 +61,8 @@ import PageHero from '../components/PageHero.astro';
                     </svg>
                   </div>
                   <div>
-                    <div class="text-white font-medium text-sm mb-1">Office Address</div>
-                    <div class="text-slate-400 text-sm">Contact us for our office address</div>
+                    <div class="text-heading font-medium text-sm mb-1">Office Address</div>
+                    <div class="text-muted text-sm">Contact us for our office address</div>
                   </div>
                 </div>
 
@@ -73,8 +73,8 @@ import PageHero from '../components/PageHero.astro';
                     </svg>
                   </div>
                   <div>
-                    <div class="text-white font-medium text-sm mb-1">Phone</div>
-                    <a href="tel:+0000000000" class="text-slate-400 text-sm hover:text-ocean-400 transition-colors">Contact us for phone number</a>
+                    <div class="text-heading font-medium text-sm mb-1">Phone</div>
+                    <a href="tel:+0000000000" class="text-muted text-sm hover:text-ocean-400 transition-colors">Contact us for phone number</a>
                   </div>
                 </div>
 
@@ -85,15 +85,15 @@ import PageHero from '../components/PageHero.astro';
                     </svg>
                   </div>
                   <div>
-                    <div class="text-white font-medium text-sm mb-1">Email</div>
-                    <a href="mailto:info@farcomarine.net" class="text-slate-400 text-sm hover:text-ocean-400 transition-colors">info@farcomarine.net</a>
+                    <div class="text-heading font-medium text-sm mb-1">Email</div>
+                    <a href="mailto:info@farcomarine.net" class="text-muted text-sm hover:text-ocean-400 transition-colors">info@farcomarine.net</a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="card animate-on-scroll">
-              <h3 class="text-white font-semibold mb-4">Business Hours</h3>
+              <h3 class="text-heading font-semibold mb-4">Business Hours</h3>
               <div class="space-y-3">
                 {[
                   { day: 'Monday - Friday', hours: '08:00 - 18:00' },
@@ -101,10 +101,10 @@ import PageHero from '../components/PageHero.astro';
                   { day: 'Sunday', hours: 'Closed' },
                 ].map((schedule) => (
                   <div class="flex justify-between items-center">
-                    <span class="text-slate-300 text-sm">{schedule.day}</span>
+                    <span class="text-body text-sm">{schedule.day}</span>
                     <span class:list={[
                       'text-sm font-medium',
-                      schedule.hours === 'Closed' ? 'text-slate-500' : 'text-ocean-400',
+                      schedule.hours === 'Closed' ? 'text-faint' : 'text-ocean-400',
                     ]}>
                       {schedule.hours}
                     </span>
@@ -114,8 +114,8 @@ import PageHero from '../components/PageHero.astro';
             </div>
 
             <div class="card animate-on-scroll bg-gradient-to-br from-ocean-600/20 to-teal-500/10 border-ocean-500/20">
-              <h3 class="text-white font-semibold mb-2">Emergency Shipping?</h3>
-              <p class="text-slate-400 text-sm mb-4">For urgent shipments outside business hours, reach out via email and mark it as urgent.</p>
+              <h3 class="text-heading font-semibold mb-2">Emergency Shipping?</h3>
+              <p class="text-muted text-sm mb-4">For urgent shipments outside business hours, reach out via email and mark it as urgent.</p>
               <a href="mailto:info@farcomarine.net?subject=URGENT Shipping Request" class="btn-outline text-xs w-full text-center">
                 Send Urgent Request
               </a>

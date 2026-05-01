@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         navy: {
-          950: '#060E1A',
-          900: '#0A1628',
-          800: '#0F1D35',
-          700: '#1B2A4A',
-          600: '#263B62',
-          500: '#324D7A',
+          950: 'rgb(var(--navy-950) / <alpha-value>)',
+          900: 'rgb(var(--navy-900) / <alpha-value>)',
+          800: 'rgb(var(--navy-800) / <alpha-value>)',
+          700: 'rgb(var(--navy-700) / <alpha-value>)',
+          600: 'rgb(var(--navy-600) / <alpha-value>)',
+          500: 'rgb(var(--navy-500) / <alpha-value>)',
         },
         ocean: {
           600: '#0284C7',
