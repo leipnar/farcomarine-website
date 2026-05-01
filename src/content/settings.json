@@ -1,0 +1,17 @@
+{
+  "company": {
+    "name": "FARCO Marine",
+    "email": "info@farcomarine.net",
+    "phone": "+98 21 26358241",
+    "phoneHref": "tel:+982126358241",
+    "address": "Tehran, Gholhak, Yakhchal St.",
+    "hours": "Mon - Fri: 08:00 - 18:00",
+    "tagline": "Your trusted partner in sea freight and global logistics. Delivering reliability across the world's oceans since day one."
+  },
+  "notice": {
+    "enabled": true,
+    "message": "Shipping delays expected for Iran & Middle East routes due to Persian Gulf situation.",
+    "linkText": "Contact us for updates.",
+    "linkUrl": "/contact"
+  }
+}

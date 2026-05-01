@@ -1,0 +1,37 @@
+{
+  "badge": "Our Story",
+  "headline": ["Built on Experience,", "Driven by Excellence"],
+  "paragraphs": [
+    "FARCO Marine was founded with a clear vision: to make international sea freight accessible, reliable, and transparent. Starting from humble beginnings, we have grown into a trusted name in the freight forwarding industry, specializing in ocean transport with supporting road logistics.",
+    "Over the years, we've built strong relationships with major shipping lines, port authorities, and logistics partners across the globe. This network enables us to offer competitive rates, flexible scheduling, and seamless cargo movement from origin to destination.",
+    "Today, we handle hundreds of shipments every month, connecting businesses to markets worldwide. Our commitment to personalized service means every client receives the attention and expertise their cargo deserves."
+  ],
+  "yearsBadge": "20+",
+  "yearsLabel": "Years of Excellence",
+  "mission": {
+    "title": "Our Mission",
+    "text": "To provide seamless, reliable, and cost-effective sea freight solutions that empower businesses to reach global markets with confidence. We aim to simplify the complexities of international shipping through expert guidance and personalized service."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "To become the most trusted freight forwarding partner for businesses across the region, recognized for our reliability, innovation, and unwavering commitment to customer success in global trade."
+  },
+  "values": [
+    {
+      "title": "Safety First",
+      "description": "We prioritize the safety of your cargo above all else, maintaining strict compliance with international standards."
+    },
+    {
+      "title": "Integrity",
+      "description": "Transparent communication, honest pricing, and ethical business practices define everything we do."
+    },
+    {
+      "title": "Innovation",
+      "description": "Continuously improving our processes and embracing technology to deliver better logistics solutions."
+    },
+    {
+      "title": "Partnership",
+      "description": "We build lasting relationships with our clients, treating your business challenges as our own."
+    }
+  ]
+}

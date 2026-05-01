@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
+import settings from '../content/settings.json';
+
+const company = settings.company;
 ---
 
 <Layout title="Contact Us — FARCO Marine" description="Get in touch with FARCO Marine. Contact us for sea freight quotes, logistics inquiries, and partnership opportunities.">
@@ -15,7 +18,7 @@ import PageHero from '../components/PageHero.astro';
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="lg:col-span-2">
-          <form id="contact-form" class="card animate-on-scroll">
+          <form id="contact-form" data-email={company.email} class="card animate-on-scroll">
             <h3 class="text-xl font-semibold text-heading mb-6">Send Us a Message</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
@@ -54,7 +57,8 @@ import PageHero from '../components/PageHero.astro';
                 body += 'Email: ' + (fd.get('email')||'') + '\n';
                 body += 'Subject: ' + (fd.get('subject')||'') + '\n\n';
                 body += 'Message:\n' + (fd.get('message')||'');
-                window.location.href = 'mailto:info@farcomarine.net?subject=' + encodeURIComponent('Contact: ' + (fd.get('subject')||'General Inquiry')) + '&body=' + encodeURIComponent(body);
+                var email = document.getElementById('contact-form').getAttribute('data-email');
+                window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent('Contact: ' + (fd.get('subject')||'General Inquiry')) + '&body=' + encodeURIComponent(body);
               });
             </script>
           </form>
@@ -74,7 +78,7 @@ import PageHero from '../components/PageHero.astro';
                   </div>
                   <div>
                     <div class="text-heading font-medium text-sm mb-1">Office Address</div>
-                    <div class="text-muted text-sm">Tehran, Gholhak, Yakhchal St.</div>
+                    <div class="text-muted text-sm">{company.address}</div>
                   </div>
                 </div>
 
@@ -86,7 +90,7 @@ import PageHero from '../components/PageHero.astro';
                   </div>
                   <div>
                     <div class="text-heading font-medium text-sm mb-1">Phone</div>
-                    <a href="tel:+982126358241" class="text-muted text-sm hover:text-ocean-400 transition-colors">+98 21 26358241</a>
+                    <a href={company.phoneHref} class="text-muted text-sm hover:text-ocean-400 transition-colors">{company.phone}</a>
                   </div>
                 </div>
 
@@ -98,7 +102,7 @@ import PageHero from '../components/PageHero.astro';
                   </div>
                   <div>
                     <div class="text-heading font-medium text-sm mb-1">Email</div>
-                    <a href="mailto:info@farcomarine.net" class="text-muted text-sm hover:text-ocean-400 transition-colors">info@farcomarine.net</a>
+                    <a href={`mailto:${company.email}`} class="text-muted text-sm hover:text-ocean-400 transition-colors">{company.email}</a>
                   </div>
                 </div>
               </div>
@@ -128,7 +132,7 @@ import PageHero from '../components/PageHero.astro';
             <div class="card animate-on-scroll bg-gradient-to-br from-ocean-600/20 to-teal-500/10 border-ocean-500/20">
               <h3 class="text-heading font-semibold mb-2">Emergency Shipping?</h3>
               <p class="text-muted text-sm mb-4">For urgent shipments outside business hours, reach out via email and mark it as urgent.</p>
-              <a href="mailto:info@farcomarine.net?subject=URGENT Shipping Request" class="btn-outline text-xs w-full text-center">
+              <a href={`mailto:${company.email}?subject=URGENT Shipping Request`} class="btn-outline text-xs w-full text-center">
                 Send Urgent Request
               </a>
             </div>

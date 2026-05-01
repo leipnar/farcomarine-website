@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
+import settings from '../content/settings.json';
 ---
 
 <Layout title="Request a Quote — FARCO Marine" description="Request a free shipping quote from FARCO Marine. Sea freight, road transport, and comprehensive logistics solutions.">
@@ -15,7 +16,7 @@ import PageHero from '../components/PageHero.astro';
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="lg:col-span-2">
-          <form id="quote-form" class="space-y-8">
+          <form id="quote-form" data-email={settings.company.email} class="space-y-8">
             <div class="animate-on-scroll">
               <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">1</span>
@@ -223,7 +224,8 @@ import PageHero from '../components/PageHero.astro';
                 body += 'Urgency: ' + (fd.get('urgency')||'') + '\n\n';
                 body += '=== Notes ===\n';
                 body += (fd.get('notes')||'');
-                window.location.href = 'mailto:info@farcomarine.net?subject=Quote%20Request%20-%20' + encodeURIComponent(fd.get('shipper_company')||'New') + '&body=' + encodeURIComponent(body);
+                var email = document.getElementById('quote-form').getAttribute('data-email');
+                window.location.href = 'mailto:' + email + '?subject=Quote%20Request%20-%20' + encodeURIComponent(fd.get('shipper_company')||'New') + '&body=' + encodeURIComponent(body);
               });
             </script>
           </form>

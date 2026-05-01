@@ -1,0 +1,125 @@
+backend:
+  name: github
+  repo: leipnar/farcomarine-website
+  branch: main
+  base_url: https://decap-github-oauth.victoriabernhard.workers.dev
+  auth_endpoint: /auth
+
+media_folder: public/images
+public_folder: /images
+
+locale: en
+
+collections:
+  - name: settings
+    label: Site Settings
+    files:
+      - name: company
+        label: Company & Contact Info
+        file: src/content/settings.json
+        fields:
+          - label: Company
+            name: company
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Phone Link, name: phoneHref, widget: string }
+              - { label: Address, name: address, widget: string }
+              - { label: Business Hours, name: hours, widget: string }
+              - { label: Tagline, name: tagline, widget: text }
+          - label: Notice Banner
+            name: notice
+            widget: object
+            fields:
+              - { label: Show Notice, name: enabled, widget: boolean, default: true }
+              - { label: Message, name: message, widget: string }
+              - { label: Link Text, name: linkText, widget: string }
+              - { label: Link URL, name: linkUrl, widget: string }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: hero
+        label: Homepage Hero
+        file: src/content/hero.json
+        fields:
+          - { label: Badge Text, name: badge, widget: string }
+          - label: Headline
+            name: headline
+            widget: list
+            field: { label: Line, name: line, widget: string }
+            min: 2
+            max: 4
+          - { label: Subtitle, name: subtitle, widget: text }
+          - { label: Primary Button Text, name: ctaPrimary, widget: string }
+          - { label: Primary Button URL, name: ctaPrimaryUrl, widget: string }
+          - { label: Secondary Button Text, name: ctaSecondary, widget: string }
+          - { label: Secondary Button URL, name: ctaSecondaryUrl, widget: string }
+          - label: Hero Stats
+            name: stats
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+          - label: Stats Bar
+            name: statsBar
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+
+      - name: about
+        label: About Page
+        file: src/content/about.json
+        fields:
+          - { label: Badge Text, name: badge, widget: string }
+          - label: Headline
+            name: headline
+            widget: list
+            field: { label: Line, name: line, widget: string }
+          - label: Paragraphs
+            name: paragraphs
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+          - { label: Years Badge, name: yearsBadge, widget: string }
+          - { label: Years Label, name: yearsLabel, widget: string }
+          - label: Mission
+            name: mission
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Vision
+            name: vision
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Core Values
+            name: values
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+
+  - name: routes
+    label: Routes & Ports
+    files:
+      - name: routes
+        label: All Routes
+        file: src/content/routes.json
+        fields:
+          - label: Regions
+            name: body
+            widget: list
+            fields:
+              - { label: Region Name, name: name, widget: string }
+              - { label: Color Theme, name: color, widget: select, options: ["ocean", "teal"] }
+              - label: Ports
+                name: destinations
+                widget: list
+                fields:
+                  - { label: Port Name, name: port, widget: string }
+                  - { label: Country, name: country, widget: string }

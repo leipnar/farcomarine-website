@@ -1,0 +1,20 @@
+{
+  "badge": "Global Sea Freight Solutions",
+  "headline": ["Navigate Global", "Trade with", "Confidence"],
+  "subtitle": "End-to-end sea freight and logistics services connecting your cargo to 50+ destinations worldwide. Reliable. Transparent. On time.",
+  "ctaPrimary": "Request a Quote",
+  "ctaPrimaryUrl": "/quote",
+  "ctaSecondary": "Our Services",
+  "ctaSecondaryUrl": "/services",
+  "stats": [
+    { "value": "20+", "label": "Years Experience" },
+    { "value": "500+", "label": "Monthly Shipments" },
+    { "value": "50+", "label": "Destinations" }
+  ],
+  "statsBar": [
+    { "value": "20+", "label": "Years Experience" },
+    { "value": "500+", "label": "Shipments / Month" },
+    { "value": "50+", "label": "Destinations" },
+    { "value": "24/7", "label": "Support Available" }
+  ]
+}

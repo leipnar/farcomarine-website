@@ -1,0 +1,109 @@
+[
+  {
+    "name": "East Asia",
+    "color": "ocean",
+    "destinations": [
+      { "port": "Dalian", "country": "China" },
+      { "port": "Qingdao", "country": "China" },
+      { "port": "Tianjin", "country": "China" },
+      { "port": "Xingang", "country": "China" },
+      { "port": "Lianyungang", "country": "China" },
+      { "port": "Shanghai", "country": "China" },
+      { "port": "Ningbo", "country": "China" },
+      { "port": "Taicang", "country": "China" },
+      { "port": "Chongqing", "country": "China" },
+      { "port": "Wuhan", "country": "China" },
+      { "port": "Nanjing", "country": "China" },
+      { "port": "Shekou", "country": "China" },
+      { "port": "Huangpu", "country": "China" },
+      { "port": "Guangzhou", "country": "China" },
+      { "port": "Foshan", "country": "China" },
+      { "port": "Zhongshan", "country": "China" },
+      { "port": "Zhuhai", "country": "China" },
+      { "port": "Jiangmen", "country": "China" },
+      { "port": "Zhaoqing", "country": "China" },
+      { "port": "Nansha", "country": "China" },
+      { "port": "Haikou", "country": "China" },
+      { "port": "Beihai", "country": "China" },
+      { "port": "Xiaolan", "country": "China" },
+      { "port": "Yunfu", "country": "China" },
+      { "port": "Zhanjiang", "country": "China" },
+      { "port": "Hong Kong", "country": "China" },
+      { "port": "Shunde", "country": "China" },
+      { "port": "Xiamen", "country": "China" },
+      { "port": "Fuzhou", "country": "China" },
+      { "port": "Shantou", "country": "China" },
+      { "port": "Kaohsiung", "country": "Taiwan" },
+      { "port": "Keelung", "country": "Taiwan" },
+      { "port": "Taichung", "country": "Taiwan" },
+      { "port": "Busan", "country": "South Korea" },
+      { "port": "Tokyo", "country": "Japan" },
+      { "port": "Yokohama", "country": "Japan" },
+      { "port": "Kobe", "country": "Japan" }
+    ]
+  },
+  {
+    "name": "South & Southeast Asia",
+    "color": "teal",
+    "destinations": [
+      { "port": "Port Klang", "country": "Malaysia" },
+      { "port": "Penang", "country": "Malaysia" },
+      { "port": "Pasir Gudang", "country": "Malaysia" },
+      { "port": "Surabaya", "country": "Indonesia" },
+      { "port": "Belawan", "country": "Indonesia" },
+      { "port": "Ho Chi Minh City", "country": "Vietnam" },
+      { "port": "Hai Phong", "country": "Vietnam" },
+      { "port": "Singapore", "country": "Singapore" },
+      { "port": "Bangkok", "country": "Thailand" },
+      { "port": "Laem Chabang", "country": "Thailand" },
+      { "port": "Yangon", "country": "Myanmar" }
+    ]
+  },
+  {
+    "name": "India & Central Asia",
+    "color": "ocean",
+    "destinations": [
+      { "port": "Nhava Sheva", "country": "India" },
+      { "port": "Kandla", "country": "India" },
+      { "port": "Karachi", "country": "Pakistan" },
+      { "port": "Chittagong", "country": "Bangladesh" },
+      { "port": "Colombo", "country": "Sri Lanka" }
+    ]
+  },
+  {
+    "name": "Middle East",
+    "color": "teal",
+    "destinations": [
+      { "port": "Bandar Abbas", "country": "Iran" },
+      { "port": "Chabahar", "country": "Iran" },
+      { "port": "Khorramshahr", "country": "Iran" },
+      { "port": "Bushehr", "country": "Iran" },
+      { "port": "Jebel Ali", "country": "UAE" },
+      { "port": "Doha", "country": "Qatar" },
+      { "port": "Sohar", "country": "Oman" }
+    ]
+  },
+  {
+    "name": "Europe",
+    "color": "ocean",
+    "destinations": [
+      { "port": "Ravenna", "country": "Italy" },
+      { "port": "Rotterdam", "country": "Netherlands" },
+      { "port": "Antwerp", "country": "Belgium" },
+      { "port": "Valencia", "country": "Spain" },
+      { "port": "Constanța", "country": "Romania" },
+      { "port": "Istanbul", "country": "Turkey" }
+    ]
+  },
+  {
+    "name": "Africa",
+    "color": "teal",
+    "destinations": [
+      { "port": "Mombasa", "country": "Kenya" },
+      { "port": "Dar es Salaam", "country": "Tanzania" },
+      { "port": "Zanzibar", "country": "Tanzania" },
+      { "port": "Benghazi", "country": "Libya" },
+      { "port": "Misrata", "country": "Libya" }
+    ]
+  }
+]
