@@ -15,7 +15,7 @@ import PageHero from '../components/PageHero.astro';
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="lg:col-span-2">
-          <form action="mailto:info@farcomarine.net" method="POST" enctype="text/plain" class="space-y-8">
+          <form id="quote-form" class="space-y-8">
             <div class="animate-on-scroll">
               <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">1</span>
@@ -68,6 +68,7 @@ import PageHero from '../components/PageHero.astro';
                   <select name="container_type" class="input-field">
                     <option value="">Select type</option>
                     <option value="20ft">20ft Container</option>
+                    <option value="20ft_hd">20ft HD (Heavy Duty - up to 26.7 MT)</option>
                     <option value="40ft">40ft Container</option>
                     <option value="40hc">40ft High Cube</option>
                     <option value="lcl">LCL (Shared)</option>
@@ -84,6 +85,77 @@ import PageHero from '../components/PageHero.astro';
             <div class="animate-on-scroll">
               <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
                 <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">3</span>
+                Shipper Information
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Company Name *</label>
+                  <input type="text" name="shipper_company" required placeholder="Shipper company name" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Contact Person *</label>
+                  <input type="text" name="shipper_contact" required placeholder="Contact person name" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Address</label>
+                  <input type="text" name="shipper_address" placeholder="Full address" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Phone</label>
+                  <input type="tel" name="shipper_phone" placeholder="+1 234 567 8900" class="input-field" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-body text-sm font-medium mb-2">Email *</label>
+                  <input type="email" name="shipper_email" required placeholder="shipper@company.com" class="input-field" />
+                </div>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">4</span>
+                Consignee Information
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Company Name</label>
+                  <input type="text" name="consignee_company" placeholder="Consignee company name" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Contact Person</label>
+                  <input type="text" name="consignee_contact" placeholder="Contact person name" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Address</label>
+                  <input type="text" name="consignee_address" placeholder="Full address" class="input-field" />
+                </div>
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Phone</label>
+                  <input type="tel" name="consignee_phone" placeholder="+1 234 567 8900" class="input-field" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-body text-sm font-medium mb-2">Email</label>
+                  <input type="email" name="consignee_email" placeholder="consignee@company.com" class="input-field" />
+                </div>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">5</span>
+                Proforma Invoice
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-body text-sm font-medium mb-2">Invoice Number</label>
+                  <input type="text" name="invoice_number" placeholder="e.g., INV-2024-001" class="input-field" />
+                </div>
+              </div>
+            </div>
+
+            <div class="animate-on-scroll">
+              <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">6</span>
                 Timeline
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -104,39 +176,56 @@ import PageHero from '../components/PageHero.astro';
 
             <div class="animate-on-scroll">
               <h3 class="text-lg font-semibold text-heading mb-6 flex items-center gap-3">
-                <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">4</span>
-                Contact Information
+                <span class="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center text-navy-900 text-sm font-bold">7</span>
+                Additional Notes
               </h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-body text-sm font-medium mb-2">Full Name *</label>
-                  <input type="text" name="name" required placeholder="Your full name" class="input-field" />
-                </div>
-                <div>
-                  <label class="block text-body text-sm font-medium mb-2">Company Name</label>
-                  <input type="text" name="company" placeholder="Your company" class="input-field" />
-                </div>
-                <div>
-                  <label class="block text-body text-sm font-medium mb-2">Email Address *</label>
-                  <input type="email" name="email" required placeholder="your@email.com" class="input-field" />
-                </div>
-                <div>
-                  <label class="block text-body text-sm font-medium mb-2">Phone Number</label>
-                  <input type="tel" name="phone" placeholder="+1 234 567 8900" class="input-field" />
-                </div>
-              </div>
-              <div class="mt-4">
-                <label class="block text-body text-sm font-medium mb-2">Additional Notes</label>
-                <textarea name="notes" rows="4" placeholder="Any special requirements, questions, or additional details..." class="input-field resize-none"></textarea>
-              </div>
+              <textarea name="notes" rows="4" placeholder="Any special requirements, questions, or additional details..." class="input-field resize-none"></textarea>
             </div>
 
             <div class="animate-on-scroll">
               <button type="submit" class="btn-primary w-full sm:w-auto text-center">
                 Submit Quote Request
               </button>
-              <p class="text-faint text-sm mt-3">We'll respond within 24 hours with a competitive quote.</p>
+              <p class="text-faint text-sm mt-3">Our team will review your request and respond via email with a competitive quote within 24 hours.</p>
             </div>
+
+            <script is:inline>
+              document.getElementById('quote-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var fd = new FormData(this);
+                var body = 'Quote Request from FARCO Marine Website\n\n';
+                body += '=== Shipment Details ===\n';
+                body += 'Origin: ' + (fd.get('origin')||'') + '\n';
+                body += 'Destination: ' + (fd.get('destination')||'') + '\n';
+                body += 'Cargo Type: ' + (fd.get('cargo_type')||'') + '\n';
+                body += 'Commodity: ' + (fd.get('commodity')||'') + '\n\n';
+                body += '=== Cargo Specs ===\n';
+                body += 'Weight: ' + (fd.get('weight')||'') + ' kg\n';
+                body += 'Volume: ' + (fd.get('volume')||'') + ' CBM\n';
+                body += 'Container Type: ' + (fd.get('container_type')||'') + '\n';
+                body += 'Containers: ' + (fd.get('containers')||'') + '\n\n';
+                body += '=== Shipper ===\n';
+                body += 'Company: ' + (fd.get('shipper_company')||'') + '\n';
+                body += 'Address: ' + (fd.get('shipper_address')||'') + '\n';
+                body += 'Phone: ' + (fd.get('shipper_phone')||'') + '\n';
+                body += 'Email: ' + (fd.get('shipper_email')||'') + '\n';
+                body += 'Contact: ' + (fd.get('shipper_contact')||'') + '\n\n';
+                body += '=== Consignee ===\n';
+                body += 'Company: ' + (fd.get('consignee_company')||'') + '\n';
+                body += 'Address: ' + (fd.get('consignee_address')||'') + '\n';
+                body += 'Phone: ' + (fd.get('consignee_phone')||'') + '\n';
+                body += 'Email: ' + (fd.get('consignee_email')||'') + '\n';
+                body += 'Contact: ' + (fd.get('consignee_contact')||'') + '\n\n';
+                body += '=== Invoice ===\n';
+                body += 'Proforma Invoice #: ' + (fd.get('invoice_number')||'') + '\n\n';
+                body += '=== Timeline ===\n';
+                body += 'Ship Date: ' + (fd.get('ship_date')||'') + '\n';
+                body += 'Urgency: ' + (fd.get('urgency')||'') + '\n\n';
+                body += '=== Notes ===\n';
+                body += (fd.get('notes')||'');
+                window.location.href = 'mailto:info@farcomarine.net?subject=Quote%20Request%20-%20' + encodeURIComponent(fd.get('shipper_company')||'New') + '&body=' + encodeURIComponent(body);
+              });
+            </script>
           </form>
         </div>
 
@@ -169,7 +258,7 @@ import PageHero from '../components/PageHero.astro';
 
             <div class="card animate-on-scroll bg-gradient-to-br from-ocean-600/20 to-teal-500/10 border-ocean-500/20">
               <h3 class="text-heading font-semibold mb-2">Quick Response</h3>
-              <p class="text-muted text-sm">Average quote response time is under <span class="text-ocean-400 font-semibold">12 hours</span> during business days.</p>
+              <p class="text-muted text-sm">FARCO Marine will respond to your quote request via <span class="text-ocean-400 font-semibold">email</span> within <span class="text-ocean-400 font-semibold">12-24 hours</span> on business days.</p>
             </div>
           </div>
         </div>

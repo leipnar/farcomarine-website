@@ -15,7 +15,7 @@ import PageHero from '../components/PageHero.astro';
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="lg:col-span-2">
-          <form action="mailto:info@farcomarine.net" method="POST" enctype="text/plain" class="card animate-on-scroll">
+          <form id="contact-form" class="card animate-on-scroll">
             <h3 class="text-xl font-semibold text-heading mb-6">Send Us a Message</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
@@ -45,6 +45,18 @@ import PageHero from '../components/PageHero.astro';
             <button type="submit" class="btn-primary">
               Send Message
             </button>
+            <script is:inline>
+              document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var fd = new FormData(this);
+                var body = 'Contact Form — FARCO Marine Website\n\n';
+                body += 'Name: ' + (fd.get('name')||'') + '\n';
+                body += 'Email: ' + (fd.get('email')||'') + '\n';
+                body += 'Subject: ' + (fd.get('subject')||'') + '\n\n';
+                body += 'Message:\n' + (fd.get('message')||'');
+                window.location.href = 'mailto:info@farcomarine.net?subject=' + encodeURIComponent('Contact: ' + (fd.get('subject')||'General Inquiry')) + '&body=' + encodeURIComponent(body);
+              });
+            </script>
           </form>
         </div>
 
