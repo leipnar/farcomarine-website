@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-navy-900 text-slate-200 font-sans;
+  }
+
+  ::selection {
+    @apply bg-ocean-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ocean-600;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-ocean-400 to-teal-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-amber-500 text-navy-900 font-semibold rounded-lg 
+           hover:bg-amber-400 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/25 
+           active:scale-95 text-sm tracking-wide uppercase;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border-2 border-ocean-500 text-ocean-400 font-semibold rounded-lg 
+           hover:bg-ocean-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-ocean-500/25 
+           active:scale-95 text-sm tracking-wide uppercase;
+  }
+
+  .card {
+    @apply bg-navy-800/50 backdrop-blur-sm border border-navy-600/30 rounded-2xl p-6 sm:p-8 
+           hover:border-ocean-500/30 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:-translate-y-1 hover:shadow-xl hover:shadow-ocean-500/10;
+  }
+
+  .input-field {
+    @apply w-full bg-navy-800/50 border border-navy-600/50 rounded-lg px-4 py-3 text-slate-200 
+           placeholder-slate-400 focus:outline-none focus:border-ocean-500 focus:ring-1 focus:ring-ocean-500/50 
+           transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-slate-400 text-lg max-w-2xl;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-gradient {
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(14, 165, 233, 0.04) 0%, transparent 50%);
+}
+
+.wave-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.ocean-particles {
+  background-image: 
+    radial-gradient(1px 1px at 10% 20%, rgba(14, 165, 233, 0.3), transparent),
+    radial-gradient(1px 1px at 30% 60%, rgba(14, 165, 233, 0.2), transparent),
+    radial-gradient(1px 1px at 50% 40%, rgba(14, 165, 233, 0.15), transparent),
+    radial-gradient(1px 1px at 70% 80%, rgba(14, 165, 233, 0.25), transparent),
+    radial-gradient(1px 1px at 90% 30%, rgba(14, 165, 233, 0.2), transparent);
+}

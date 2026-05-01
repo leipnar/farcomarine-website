@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout title="Services — FARCO Marine" description="Explore FARCO Marine's comprehensive logistics services: sea freight, road transport, customs clearance, warehousing, and more.">
+  <Header slot="header" />
+  <Footer slot="footer" />
+
+  <PageHero title="Our Services" subtitle="Comprehensive logistics solutions for every shipping need" />
+
+  <section class="section-padding bg-navy-900">
+    <div class="container-custom">
+      <div class="text-center mb-14 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Core Service</span>
+        </div>
+        <h2 class="section-title text-white">Sea Freight</h2>
+        <p class="section-subtitle mx-auto">Our primary expertise — connecting your cargo to the world's major trade routes</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="card animate-on-scroll">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-ocean-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-navy-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Full Container Load (FCL)</h3>
+          </div>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            Dedicated containers for your exclusive use. Ideal for large shipments requiring a full 20ft or 40ft container. Maximum security and efficiency for your cargo.
+          </p>
+          <ul class="space-y-2">
+            {['Exclusive container use', '20ft and 40ft options available', 'Competitive rates with major shipping lines', 'Door-to-port, port-to-port, and door-to-door'].map((item) => (
+              <li class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="w-4 h-4 text-ocean-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-ocean-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-navy-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Less than Container Load (LCL)</h3>
+          </div>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            Cost-effective solution for smaller shipments. Share container space with other cargo — pay only for the space you use.
+          </p>
+          <ul class="space-y-2">
+            {['Pay only for the space you need', 'Ideal for smaller shipments', 'Consolidation and deconsolidation services', 'Flexible scheduling options'].map((item) => (
+              <li class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="w-4 h-4 text-ocean-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-ocean-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-navy-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Break Bulk & Project Cargo</h3>
+          </div>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            Specialized handling for oversized, heavy, or unconventional cargo that doesn't fit standard containers. Custom solutions for complex logistics challenges.
+          </p>
+          <ul class="space-y-2">
+            {['Heavy lift and oversized cargo', 'Project planning and coordination', 'Specialized equipment and rigging', 'Route surveys and feasibility studies'].map((item) => (
+              <li class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="w-4 h-4 text-ocean-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-ocean-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-navy-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20"/>
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a10 10 0 0 1 0 20"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Reefer Containers</h3>
+          </div>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            Temperature-controlled shipping for perishable goods, pharmaceuticals, and other temperature-sensitive cargo. Continuous monitoring throughout transit.
+          </p>
+          <ul class="space-y-2">
+            {['Temperature range: -35°C to +30°C', 'Real-time temperature monitoring', 'Ideal for food, pharma, and chemicals', 'Pre-cooling and inspection services'].map((item) => (
+              <li class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="w-4 h-4 text-ocean-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-800/30">
+    <div class="container-custom">
+      <div class="text-center mb-14 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Supporting Service</span>
+        </div>
+        <h2 class="section-title text-white">Road Transport</h2>
+        <p class="section-subtitle mx-auto">Connecting ports to your doorstep with efficient inland logistics</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card animate-on-scroll">
+          <div class="w-12 h-12 bg-ocean-500/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Full Truckload (FTL)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Dedicated trucks for large shipments. Direct routes, minimum handling, maximum speed.</p>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="w-12 h-12 bg-ocean-500/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/>
+              <path d="M15 18H9"/>
+              <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/>
+              <circle cx="17" cy="18" r="2"/>
+              <circle cx="7" cy="18" r="2"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Less than Truckload (LTL)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Cost-effective shared transport for smaller loads. Flexible scheduling and routing options.</p>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="w-12 h-12 bg-ocean-500/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Door-to-Door Delivery</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Complete logistics chain from pickup to delivery. One partner, one responsibility, zero hassle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-900">
+    <div class="container-custom">
+      <div class="text-center mb-14 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Value-Added Services</span>
+        </div>
+        <h2 class="section-title text-white">Supporting Services</h2>
+        <p class="section-subtitle mx-auto">End-to-end logistics support beyond transportation</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card animate-on-scroll">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ocean-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2">Customs Clearance & Documentation</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Expert handling of import/export documentation, customs declarations, and regulatory compliance. We ensure smooth clearance at every border.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ocean-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2">Warehousing & Distribution</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Secure storage facilities at strategic locations. Inventory management, cross-docking, and distribution services to streamline your supply chain.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ocean-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2">Cargo Insurance</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Comprehensive insurance coverage options to protect your cargo against loss or damage during transit. Peace of mind for every shipment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card animate-on-scroll">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ocean-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2">Supply Chain Consulting</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Strategic logistics advice to optimize your supply chain. Route optimization, cost analysis, and tailored solutions for your business needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</Layout>

@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import StatCard from '../components/StatCard.astro';
+import ValueCard from '../components/ValueCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const shipIcon = '<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 3v4"/></svg>';
+const truckIcon = '<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>';
+const customsIcon = '<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>';
+const globeIcon = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
+const shieldIcon = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>';
+const clockIcon = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+const walletIcon = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>';
+const usersIcon = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
+---
+
+<Layout title="FARCO Marine — Sea Freight & Global Logistics">
+  <Header slot="header" />
+  <Footer slot="footer" />
+
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="absolute inset-0 ocean-particles"></div>
+    
+    <div class="absolute top-20 right-0 w-[600px] h-[600px] opacity-[0.03]">
+      <svg viewBox="0 0 200 200" fill="currentColor" class="text-ocean-400 w-full h-full animate-wave">
+        <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+        <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/>
+        <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/>
+        <path d="M12 3v4"/>
+      </svg>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-8 animate-fade-in">
+          <div class="w-1.5 h-1.5 bg-ocean-400 rounded-full animate-pulse"></div>
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Global Sea Freight Solutions</span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
+          Your Trusted Partner in
+          <span class="gradient-text">Sea Freight</span>
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-xl animate-fade-in-up leading-relaxed" style="animation-delay: 0.2s">
+          Reliable, efficient, and cost-effective ocean freight services connecting your cargo to the world. From port to port, door to door.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.3s">
+          <a href="/quote" class="btn-primary">
+            Request a Quote
+          </a>
+          <a href="/services" class="btn-outline">
+            Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" fill="none">
+        <path d="M0 60V30C200 0 400 60 600 30C800 0 1000 60 1200 30V60H0Z" fill="rgb(14 165 233)"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="bg-ocean-500 py-8">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <StatCard value="20+" label="Years Experience" />
+        <StatCard value="500+" label="Shipments / Month" />
+        <StatCard value="50+" label="Destinations" />
+        <StatCard value="24/7" label="Support Available" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-900">
+    <div class="container-custom">
+      <div class="text-center mb-14 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">What We Do</span>
+        </div>
+        <h2 class="section-title text-white">Our Services</h2>
+        <p class="section-subtitle mx-auto">Comprehensive logistics solutions tailored to your shipping needs</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ServiceCard
+          icon={shipIcon}
+          title="Sea Freight"
+          description="Full Container Load (FCL) and Less than Container Load (LCL) services across all major global trade routes. Competitive rates and reliable transit times."
+          href="/services"
+          highlighted={true}
+        />
+        <ServiceCard
+          icon={truckIcon}
+          title="Road Transport"
+          description="Efficient inland transportation connecting ports to final destinations. Door-to-door delivery solutions for seamless logistics."
+          href="/services"
+        />
+        <ServiceCard
+          icon={customsIcon}
+          title="Customs Clearance"
+          description="Expert handling of all customs documentation and procedures. Smooth clearance process to avoid delays at any port."
+          href="/services"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-800/30">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+            <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Why FARCO</span>
+          </div>
+          <h2 class="section-title text-white mb-6">Why Choose Us</h2>
+          <p class="text-slate-400 text-lg mb-10 leading-relaxed">
+            With decades of experience in maritime logistics, we understand the complexities of international shipping. Our commitment to reliability, transparency, and customer satisfaction sets us apart.
+          </p>
+          
+          <div class="space-y-6">
+            <ValueCard
+              icon={globeIcon}
+              title="Global Network"
+              description="Access to major ports worldwide through our extensive network of trusted partners and agents."
+            />
+            <ValueCard
+              icon={shieldIcon}
+              title="Reliability & Safety"
+              description="Your cargo is in safe hands. We maintain the highest standards of safety and compliance."
+            />
+            <ValueCard
+              icon={clockIcon}
+              title="Timely Delivery"
+              description="Efficient routing and scheduling ensure your shipments arrive on time, every time."
+            />
+            <ValueCard
+              icon={walletIcon}
+              title="Competitive Rates"
+              description="Leverage our volume and partnerships to get the best rates for your shipments."
+            />
+          </div>
+        </div>
+        
+        <div class="relative animate-on-scroll">
+          <div class="aspect-square max-w-lg mx-auto relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-ocean-500/10 to-teal-500/10 rounded-3xl border border-navy-600/30"></div>
+            <div class="absolute inset-4 bg-navy-800/50 rounded-2xl border border-navy-600/20 flex items-center justify-center">
+              <svg class="w-32 h-32 text-ocean-500/20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/>
+                <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/>
+                <path d="M12 3v4"/>
+              </svg>
+            </div>
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-ocean-500/10 rounded-2xl border border-ocean-500/20 flex items-center justify-center">
+              <span class="text-ocean-400 text-3xl font-bold">20+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</Layout>

@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout title="About Us — FARCO Marine" description="Learn about FARCO Marine's story, mission, and values. Your trusted partner in sea freight and global logistics.">
+  <Header slot="header" />
+  <Footer slot="footer" />
+
+  <PageHero title="About FARCO Marine" subtitle="Your trusted partner navigating the world's oceans for over two decades" />
+
+  <section class="section-padding bg-navy-900">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+            <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">Our Story</span>
+          </div>
+          <h2 class="section-title text-white">Built on Experience,<br/>Driven by Excellence</h2>
+          <p class="text-slate-400 leading-relaxed mt-6 mb-6">
+            FARCO Marine was founded with a clear vision: to make international sea freight accessible, reliable, and transparent. Starting from humble beginnings, we have grown into a trusted name in the freight forwarding industry, specializing in ocean transport with supporting road logistics.
+          </p>
+          <p class="text-slate-400 leading-relaxed mb-6">
+            Over the years, we've built strong relationships with major shipping lines, port authorities, and logistics partners across the globe. This network enables us to offer competitive rates, flexible scheduling, and seamless cargo movement from origin to destination.
+          </p>
+          <p class="text-slate-400 leading-relaxed">
+            Today, we handle hundreds of shipments every month, connecting businesses to markets worldwide. Our commitment to personalized service means every client receives the attention and expertise their cargo deserves.
+          </p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="relative">
+            <div class="aspect-[4/3] bg-gradient-to-br from-navy-800 to-navy-700 rounded-2xl border border-navy-600/30 overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <svg class="w-20 h-20 text-ocean-500/20 mx-auto mb-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+                    <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/>
+                  </svg>
+                  <span class="text-slate-500 text-sm">FARCO Marine — Est. 20+ years ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-ocean-500 text-navy-900 rounded-xl px-6 py-4 shadow-xl shadow-ocean-500/20">
+              <div class="text-2xl font-bold">20+</div>
+              <div class="text-xs font-medium opacity-80">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-800/30">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="card animate-on-scroll">
+          <div class="w-12 h-12 bg-ocean-500/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16l4-4-4-4"/>
+              <path d="M8 12h8"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Our Mission</h3>
+          <p class="text-slate-400 leading-relaxed">
+            To provide seamless, reliable, and cost-effective sea freight solutions that empower businesses to reach global markets with confidence. We aim to simplify the complexities of international shipping through expert guidance and personalized service.
+          </p>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="w-12 h-12 bg-ocean-500/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Our Vision</h3>
+          <p class="text-slate-400 leading-relaxed">
+            To become the most trusted freight forwarding partner for businesses across the region, recognized for our reliability, innovation, and unwavering commitment to customer success in global trade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-navy-900">
+    <div class="container-custom">
+      <div class="text-center mb-14 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 bg-ocean-500/10 border border-ocean-500/20 rounded-full px-4 py-1.5 mb-4">
+          <span class="text-ocean-400 text-xs font-medium tracking-wider uppercase">What Drives Us</span>
+        </div>
+        <h2 class="section-title text-white">Our Core Values</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card text-center animate-on-scroll">
+          <div class="w-14 h-14 bg-ocean-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Safety First</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We prioritize the safety of your cargo above all else, maintaining strict compliance with international standards.</p>
+        </div>
+        
+        <div class="card text-center animate-on-scroll">
+          <div class="w-14 h-14 bg-ocean-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Integrity</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Transparent communication, honest pricing, and ethical business practices define everything we do.</p>
+        </div>
+        
+        <div class="card text-center animate-on-scroll">
+          <div class="w-14 h-14 bg-ocean-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Innovation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Continuously improving our processes and embracing technology to deliver better logistics solutions.</p>
+        </div>
+        
+        <div class="card text-center animate-on-scroll">
+          <div class="w-14 h-14 bg-ocean-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-ocean-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Partnership</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We build lasting relationships with our clients, treating your business challenges as our own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</Layout>
