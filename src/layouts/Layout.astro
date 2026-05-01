@@ -77,5 +77,47 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       );
       document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
     </script>
+
+    <script is:inline>
+    (function() {
+      function updateIcons(isDark) {
+        document.querySelectorAll('.theme-toggle-btn').forEach(function(btn) {
+          var moon = btn.querySelector('.theme-icon-moon');
+          var sun = btn.querySelector('.theme-icon-sun');
+          if (moon && sun) {
+            if (isDark) {
+              moon.classList.remove('hidden');
+              sun.classList.add('hidden');
+            } else {
+              moon.classList.add('hidden');
+              sun.classList.remove('hidden');
+            }
+          }
+        });
+      }
+
+      function setTheme(isDark) {
+        var html = document.documentElement;
+        if (isDark) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+        localStorage.setItem('farco-theme', isDark ? 'dark' : 'light');
+        updateIcons(isDark);
+      }
+
+      updateIcons(document.documentElement.classList.contains('dark'));
+
+      document.addEventListener('click', function(e) {
+        var btn = e.target.closest('.theme-toggle-btn');
+        if (btn) {
+          e.preventDefault();
+          e.stopPropagation();
+          setTheme(!document.documentElement.classList.contains('dark'));
+        }
+      });
+    })();
+    </script>
   </body>
 </html>
