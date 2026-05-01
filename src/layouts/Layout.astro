@@ -60,6 +60,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     })} />
   </head>
   <body class="min-h-screen flex flex-col">
+    <div id="site-notice" class="bg-amber-500/90 dark:bg-amber-600/90 text-navy-900 dark:text-white text-center text-sm font-medium px-4 py-2.5 relative z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+        <span>Shipping delays expected for Iran &amp; Middle East routes due to Persian Gulf situation. <a href="/contact" class="underline font-semibold hover:opacity-80">Contact us for updates.</a></span>
+        <button id="notice-close" class="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:opacity-70 transition-opacity" aria-label="Dismiss notice">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
     <slot name="header" />
     <main class="flex-1">
       <slot />
@@ -79,6 +88,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
       );
       document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+
+    <script is:inline>
+    (function() {
+      var n = document.getElementById('site-notice');
+      if (n && localStorage.getItem('farco-notice-closed')) { n.style.display = 'none'; }
+      var c = document.getElementById('notice-close');
+      if (c) { c.addEventListener('click', function() { n.style.display = 'none'; localStorage.setItem('farco-notice-closed','1'); }); }
+    })();
     </script>
 
     <script is:inline>
