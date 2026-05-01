@@ -21,6 +21,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {Astro.url.pathname === '/' && (
+      <link rel="preload" as="image" href="/images/hero-bg-480.webp" type="image/webp" media="(max-width: 480px)" />
+      <link rel="preload" as="image" href="/images/hero-bg-960.webp" type="image/webp" media="(max-width: 960px)" />
+    )}
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
