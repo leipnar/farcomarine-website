@@ -107,7 +107,7 @@ const navLinks = [
 
   function updateHeader() {
     if (!header) return;
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
       header.classList.add('bg-navy-900/95', 'backdrop-blur-xl', 'shadow-lg', 'shadow-navy-950/50');
       header.classList.remove('bg-transparent');
     } else {
@@ -115,6 +115,24 @@ const navLinks = [
       header.classList.add('bg-transparent');
     }
   }
+
+  function positionHeader() {
+    var n = document.getElementById('site-notice');
+    if (n && n.offsetHeight > 0) {
+      header.style.top = n.offsetHeight + 'px';
+    } else {
+      header.style.top = '0px';
+    }
+    var spacer = header.nextElementSibling;
+    if (spacer) {
+      var noticeH = (n && n.offsetHeight > 0) ? n.offsetHeight : 0;
+      spacer.style.height = (80 + noticeH) + 'px';
+    }
+  }
+
+  positionHeader();
+  window.addEventListener('resize', positionHeader);
+  window.addEventListener('scroll', positionHeader, { passive: true });
 
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
