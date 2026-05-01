@@ -2,7 +2,7 @@ backend:
   name: github
   repo: leipnar/farcomarine-website
   branch: main
-  base_url: https://decap-github-oauth.victoriabernhard.workers.dev
+  base_url: https://farco-cms-auth.ditrust.workers.dev
   auth_endpoint: /auth
 
 media_folder: public/images
