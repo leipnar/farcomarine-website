@@ -10,67 +10,108 @@ const regions = [
     name: 'East Asia',
     color: 'ocean',
     destinations: [
+      { port: 'Dalian', country: 'China' },
+      { port: 'Qingdao', country: 'China' },
+      { port: 'Tianjin', country: 'China' },
+      { port: 'Xingang', country: 'China' },
+      { port: 'Lianyungang', country: 'China' },
       { port: 'Shanghai', country: 'China' },
       { port: 'Ningbo', country: 'China' },
-      { port: 'Shenzhen', country: 'China' },
+      { port: 'Taicang', country: 'China' },
+      { port: 'Chongqing', country: 'China' },
+      { port: 'Wuhan', country: 'China' },
+      { port: 'Nanjing', country: 'China' },
+      { port: 'Shekou', country: 'China' },
+      { port: 'Huangpu', country: 'China' },
+      { port: 'Guangzhou', country: 'China' },
+      { port: 'Foshan', country: 'China' },
+      { port: 'Zhongshan', country: 'China' },
+      { port: 'Zhuhai', country: 'China' },
+      { port: 'Jiangmen', country: 'China' },
+      { port: 'Zhaoqing', country: 'China' },
+      { port: 'Nansha', country: 'China' },
+      { port: 'Haikou', country: 'China' },
+      { port: 'Beihai', country: 'China' },
+      { port: 'Xiaolan', country: 'China' },
+      { port: 'Yunfu', country: 'China' },
+      { port: 'Zhanjiang', country: 'China' },
+      { port: 'Hong Kong', country: 'China' },
+      { port: 'Shunde', country: 'China' },
+      { port: 'Xiamen', country: 'China' },
+      { port: 'Fuzhou', country: 'China' },
+      { port: 'Shantou', country: 'China' },
+      { port: 'Kaohsiung', country: 'Taiwan' },
+      { port: 'Keelung', country: 'Taiwan' },
+      { port: 'Taichung', country: 'Taiwan' },
       { port: 'Busan', country: 'South Korea' },
       { port: 'Tokyo', country: 'Japan' },
+      { port: 'Yokohama', country: 'Japan' },
+      { port: 'Kobe', country: 'Japan' },
     ],
   },
   {
-    name: 'Middle Asia (CIS)',
+    name: 'South & Southeast Asia',
     color: 'teal',
     destinations: [
-      { port: 'Bandar Abbas', country: 'Iran' },
-      { port: 'Aktau', country: 'Kazakhstan' },
-      { port: 'Turkmenbashi', country: 'Turkmenistan' },
-      { port: 'Baku', country: 'Azerbaijan' },
-      { port: 'Novorossiysk', country: 'Russia' },
+      { port: 'Port Klang', country: 'Malaysia' },
+      { port: 'Penang', country: 'Malaysia' },
+      { port: 'Pasir Gudang', country: 'Malaysia' },
+      { port: 'Surabaya', country: 'Indonesia' },
+      { port: 'Belawan', country: 'Indonesia' },
+      { port: 'Mundra', country: 'India' },
+      { port: 'Ho Chi Minh City', country: 'Vietnam' },
+      { port: 'Hai Phong', country: 'Vietnam' },
+      { port: 'Singapore', country: 'Singapore' },
+      { port: 'Bangkok', country: 'Thailand' },
+      { port: 'Laem Chabang', country: 'Thailand' },
+      { port: 'Yangon', country: 'Myanmar' },
     ],
   },
   {
-    name: 'West Asia / South Asia',
+    name: 'India & Central Asia',
     color: 'ocean',
     destinations: [
-      { port: 'Mumbai', country: 'India' },
       { port: 'Nhava Sheva', country: 'India' },
+      { port: 'Kandla', country: 'India' },
       { port: 'Karachi', country: 'Pakistan' },
-      { port: 'Colombo', country: 'Sri Lanka' },
       { port: 'Chittagong', country: 'Bangladesh' },
+      { port: 'Colombo', country: 'Sri Lanka' },
     ],
   },
   {
     name: 'Middle East',
     color: 'teal',
     destinations: [
-      { port: 'Dubai (Jebel Ali)', country: 'UAE' },
-      { port: 'Jeddah', country: 'Saudi Arabia' },
+      { port: 'Bandar Abbas', country: 'Iran' },
+      { port: 'Chabahar', country: 'Iran' },
+      { port: 'Khorramshahr', country: 'Iran' },
+      { port: 'Bushehr', country: 'Iran' },
+      { port: 'Jebel Ali', country: 'UAE' },
       { port: 'Doha', country: 'Qatar' },
-      { port: 'Muscat', country: 'Oman' },
-      { port: 'Kuwait', country: 'Kuwait' },
+      { port: 'Sohar', country: 'Oman' },
     ],
   },
   {
     name: 'Europe',
     color: 'ocean',
     destinations: [
+      { port: 'Ravenna', country: 'Italy' },
       { port: 'Rotterdam', country: 'Netherlands' },
       { port: 'Antwerp', country: 'Belgium' },
-      { port: 'Barcelona', country: 'Spain' },
-      { port: 'Genoa', country: 'Italy' },
-      { port: 'Constanta', country: 'Romania' },
-      { port: 'Haydar Pasha', country: 'Turkey' },
+      { port: 'Valencia', country: 'Spain' },
+      { port: 'Constanța', country: 'Romania' },
+      { port: 'Istanbul', country: 'Turkey' },
     ],
   },
   {
-    name: 'North & West Africa',
+    name: 'Africa',
     color: 'teal',
     destinations: [
-      { port: 'Tangier', country: 'Morocco' },
-      { port: 'Casablanca', country: 'Morocco' },
-      { port: 'Lagos', country: 'Nigeria' },
-      { port: 'Tema', country: 'Ghana' },
-      { port: 'Dakar', country: 'Senegal' },
+      { port: 'Mombasa', country: 'Kenya' },
+      { port: 'Dar es Salaam', country: 'Tanzania' },
+      { port: 'Zanzibar', country: 'Tanzania' },
+      { port: 'Benghazi', country: 'Libya' },
+      { port: 'Misrata', country: 'Libya' },
     ],
   },
 ];
@@ -105,41 +146,48 @@ const regions = [
 
       <div class="mb-16 animate-on-scroll">
         <div class="max-w-5xl mx-auto bg-navy-800/30 rounded-2xl border border-navy-600/30 p-8 sm:p-12">
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
             <div class="space-y-2">
               <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
                 <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
               </div>
               <div class="text-heading font-semibold text-sm">East Asia</div>
-              <div class="text-muted text-xs">China, Korea, Japan</div>
-            </div>
-            <div class="space-y-2">
-              <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
-                <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-              <div class="text-heading font-semibold text-sm">Middle East</div>
-              <div class="text-muted text-xs">UAE, Saudi, Qatar</div>
-            </div>
-            <div class="space-y-2">
-              <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
-                <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-              <div class="text-heading font-semibold text-sm">West Asia</div>
-              <div class="text-muted text-xs">India, Pakistan</div>
+              <div class="text-muted text-xs">China, Taiwan, Korea, Japan</div>
             </div>
             <div class="space-y-2">
               <div class="w-12 h-12 bg-teal-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-teal-500/30">
                 <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
               </div>
+              <div class="text-heading font-semibold text-sm">SE Asia</div>
+              <div class="text-muted text-xs">Malaysia, Indonesia, Vietnam</div>
+            </div>
+            <div class="space-y-2">
+              <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
+                <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div class="text-heading font-semibold text-sm">India & Central Asia</div>
+              <div class="text-muted text-xs">India, Pakistan, Bangladesh</div>
+            </div>
+            <div class="space-y-2">
+              <div class="w-12 h-12 bg-teal-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-teal-500/30">
+                <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div class="text-heading font-semibold text-sm">Middle East</div>
+              <div class="text-muted text-xs">Iran, UAE, Qatar, Oman</div>
+            </div>
+            <div class="space-y-2">
+              <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
+                <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
               <div class="text-heading font-semibold text-sm">Europe</div>
               <div class="text-muted text-xs">NL, BE, ES, IT, RO, TR</div>
             </div>
-            <div class="space-y-2 col-span-2 sm:col-span-1">
+            <div class="space-y-2">
               <div class="w-12 h-12 bg-ocean-500/10 rounded-full flex items-center justify-center mx-auto border-2 border-ocean-500/30">
                 <svg class="w-5 h-5 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
               </div>
               <div class="text-heading font-semibold text-sm">Africa</div>
-              <div class="text-muted text-xs">Morocco, Nigeria, Kenya</div>
+              <div class="text-muted text-xs">Kenya, Tanzania, Libya</div>
             </div>
           </div>
           <div class="mt-8 pt-6 border-t border-navy-600/20 text-center">
